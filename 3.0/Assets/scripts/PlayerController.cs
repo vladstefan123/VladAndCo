@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerControllerTutorialUpdates : MonoBehaviour
 {
     public int maxHealth;
+    public float speed;
     int currentHealth;
     
     Animator animator;
@@ -80,8 +81,8 @@ public class PlayerControllerTutorialUpdates : MonoBehaviour
             animator.SetBool("isMoving", false);
         }
         Vector2 position = transform.position;
-        position.x = position.x + 0.004f * horizontal;
-        position.y = position.y + 0.004f * vertical;
+        position.x = position.x + speed * horizontal;
+        position.y = position.y + speed * vertical;
         transform.position = position;
     }
     void ChangeHealth (int amount)
