@@ -36121,6 +36121,7 @@ GameObject:
   - component: {fileID: 999828778}
   - component: {fileID: 999828779}
   - component: {fileID: 999828780}
+  - component: {fileID: 999828781}
   m_Layer: 0
   m_Name: slime
   m_TagString: Untagged
@@ -36230,6 +36231,39 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0010160041, y: -0.015264636}
   m_Size: {x: 0.14493063, y: 0.11529971}
   m_Direction: 1
+--- !u!114 &999828781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999828777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9edebdcc8cb812419efdf1f14180f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  playerHealth1: {fileID: 2082196398}
+--- !u!1 &1144881840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8321283928712707155, guid: 602e301b651b8f942b58c4ea81d26eb1, type: 3}
+  m_PrefabInstance: {fileID: 7708631969057621547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1144881842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144881840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bf5cb03daf79b499808bb7fceb255f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
 --- !u!1 &1164808084
 GameObject:
   m_ObjectHideFlags: 0
@@ -36648,6 +36682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0bf5cb03daf79b499808bb7fceb255f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
 --- !u!1001 &7708631969057621547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36736,6 +36772,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1947587258005072572, guid: 602e301b651b8f942b58c4ea81d26eb1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -481
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947587258005072572, guid: 602e301b651b8f942b58c4ea81d26eb1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 341
+      objectReference: {fileID: 0}
     - target: {fileID: 8197189249893409314, guid: 602e301b651b8f942b58c4ea81d26eb1, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -36751,7 +36795,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8321283928712707155, guid: 602e301b651b8f942b58c4ea81d26eb1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1144881842}
   m_SourcePrefab: {fileID: 100100000, guid: 602e301b651b8f942b58c4ea81d26eb1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
