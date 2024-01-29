@@ -8,7 +8,7 @@ public class PlayerControllerTutorialUpdates : MonoBehaviour
 {
     public int maxHealth;
     public float speed;
-    int currentHealth;
+    public  int currentHealth;
     
     Animator animator;
     // Start is called before the first frame update
