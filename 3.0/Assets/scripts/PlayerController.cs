@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -84,6 +85,10 @@ public class PlayerControllerTutorialUpdates : MonoBehaviour
         position.x = position.x + speed * horizontal;
         position.y = position.y + speed * vertical;
         transform.position = position;
+        if (animator.GetBool("isDead"))
+        {
+            speed=0;
+        }
     }
     
 

@@ -2,31 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.InputSystem;
 
 public class playerHealth : MonoBehaviour
 {
    
-   
     public int maxHealth=10;
     public int currentHealth;
-    public healthbar healthBar;
+    public GameOverScreen gameOverScreen;
+    public Animator animator;
     void Start()
     {
-       
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-       
     }
     
 public void TakeDamage(int damage)
 {
 
     currentHealth-=damage;
-    healthBar.SetHealth(currentHealth);
     if(currentHealth <=0)
     {
-        Destroy(gameObject);
+        animator.SetBool("isDead", true);
+        gameOverScreen.Setup();
     }
 }
 }
