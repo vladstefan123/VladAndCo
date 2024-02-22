@@ -7,15 +7,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerControllerTutorialUpdates : MonoBehaviour
 {
-    public int maxHealth;
+ 
     public float speed;
-    public  int currentHealth;
+
     
     Animator animator;
     // Start is called before the first frame update
     void Start()
     {   
-        currentHealth = maxHealth;
         animator = GetComponent<Animator>();
     }
        
@@ -87,11 +86,6 @@ public class PlayerControllerTutorialUpdates : MonoBehaviour
         transform.position = position;
     }
     
-    void ChangeHealth (int amount)
-     {
-       currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-       Debug.Log(currentHealth + "/" + maxHealth);
-     }
 
 
 }
