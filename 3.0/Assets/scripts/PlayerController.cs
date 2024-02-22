@@ -86,6 +86,7 @@ public class PlayerControllerTutorialUpdates : MonoBehaviour
         position.y = position.y + speed * vertical;
         transform.position = position;
     }
+    
     void ChangeHealth (int amount)
      {
        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
